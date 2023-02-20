@@ -33,3 +33,11 @@ kubectl port-forward -n kubeapps svc/kubeapps 8080:80
 ```
 kubectl -n <namespace> exec -it <pod> -- /bin/bash
 ```
+
+### minikube-service
+
+```
+minikube service -n dev nginx --url
+```
+
+
