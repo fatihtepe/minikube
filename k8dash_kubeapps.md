@@ -1,4 +1,22 @@
+```
+  helm repo add bitnami https://charts.bitnami.com/bitnami
+```
 
+```
+minikube start --cpus 2 --memory 2000 --profile kubeapps
+```
+
+```
+helm install -n kubeapps --create-namespace kubeapps bitnami/kubeapps
+```
+
+```
+kubectl create --namespace default serviceaccount kubeapps-operator
+```
+
+```
+kubectl create clusterrolebinding kubeapps-operator --clusterrole=cluster-admin --serviceaccount=default:kubeapps-operator
+```
 
 ## To access K8dash
 ```
