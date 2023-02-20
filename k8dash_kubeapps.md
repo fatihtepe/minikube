@@ -1,6 +1,6 @@
 
 
-K8dash
+# To access K8dash
 ```
 minikube dashboard --url --profile kubeapps
 ```
@@ -9,7 +9,8 @@ minikube dashboard --url --profile kubeapps
 http://127.0.0.1:52814/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
 ```
 
-TogetToken=>k8dash=>secret=>token
+## If you have no token already run following to get one.. You can create a new resource by clicking right corner plus (+)
+Then Go to Secret there look for kubeapps-operator-token
 ```
 apiVersion: v1
 kind: Secret
@@ -22,7 +23,7 @@ type: kubernetes.io/service-account-token
 ```
 
 
-ToAccessKubeapps
+# To Access Kubeapps run following and get token (previous step)
 
 ```
 kubectl port-forward -n kubeapps svc/kubeapps 8080:80
