@@ -59,3 +59,7 @@ minikube service -n dev nginx --url
 ```
 
 
+```
+helm repo add traefik https://traefik.github.io/charts
+```
+
